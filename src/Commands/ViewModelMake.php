@@ -13,7 +13,11 @@ use Symfony\Component\Console\Output\OutputInterface;
 )]
 class ViewModelMake extends MakeFromStubCommand
 {
-    protected function execute(InputInterface $input, OutputInterface $output): int
+    protected $signature = 'make:viewmodel {name : The class name of the View Model}';
+
+    protected $description = 'Create a ViewModel';
+
+    protected function execute(InputInterface $input, OutputInterface $output)
     {
         $name = $input->getArgument('name');
 

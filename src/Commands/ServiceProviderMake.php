@@ -13,7 +13,11 @@ use Symfony\Component\Console\Output\OutputInterface;
 )]
 class ServiceProviderMake extends MakeFromStubCommand
 {
-    protected function execute(InputInterface $input, OutputInterface $output): int
+    protected $signature = 'make:provider {name : The class name of the ServiceProvider}';
+
+    protected $description = 'Create a ServiceProvider';
+
+    protected function execute(InputInterface $input, OutputInterface $output)
     {
         $name = $input->getArgument('name');
 

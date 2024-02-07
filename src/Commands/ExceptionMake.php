@@ -12,7 +12,11 @@ use Symfony\Component\Console\Output\OutputInterface;
 )]
 class ExceptionMake extends MakeFromStubCommand
 {
-    protected function execute(InputInterface $input, OutputInterface $output): int
+    protected $signature = 'make:exception {name : The class name of the Exception}';
+
+    protected $description = 'Create a Exception';
+
+    protected function execute(InputInterface $input, OutputInterface $output)
     {
         $name = $input->getArgument('name');
 

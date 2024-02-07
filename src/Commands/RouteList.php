@@ -15,8 +15,11 @@ use Symfony\Component\Console\Output\OutputInterface;
 )]
 class RouteList extends Command
 {
+    protected $signature = 'route:list';
 
-    protected function execute(InputInterface $input, OutputInterface $output): int
+    protected $description = 'List all registered routes';
+
+    protected function execute(InputInterface $input, OutputInterface $output)
     {
         $router = $this->app->get(Router::class);
 
