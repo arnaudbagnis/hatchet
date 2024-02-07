@@ -1,5 +1,5 @@
 {
-    "name": "rareloop/hatchet",
+    "name": "adlg/hatchet",
     "require": {
         "php": "^8.0.0",
         "rareloop/lumberjack-core": "^5.0.1||^6.0.0",
